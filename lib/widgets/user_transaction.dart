@@ -16,12 +16,6 @@ class _UserTrasactionState extends State<UserTrasaction> {
       amount: 100,
       date: DateTime.now(),
     ),
-    Transaction(
-      id: 't2',
-      title: 'Cosmetics',
-      amount: 200,
-      date: DateTime.now(),
-    ),
   ];
   void _addNewTransaction(String txTitle, double txAmount) {
     final newTx = Transaction(
