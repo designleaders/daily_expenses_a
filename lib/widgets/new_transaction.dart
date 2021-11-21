@@ -9,41 +9,42 @@ class NewTransaction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-        elevation: 5,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            TextField(
-              decoration: InputDecoration(
-                labelText: 'title',
-              ),
-              controller: titleController,
+      elevation: 5,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          TextField(
+            decoration: InputDecoration(
+              labelText: 'title',
             ),
-            TextField(
-              decoration: InputDecoration(
-                labelText: 'amount',
-              ),
-              controller: amountController,
+            controller: titleController,
+          ),
+          TextField(
+            decoration: InputDecoration(
+              labelText: 'amount',
             ),
-            FlatButton(
-              onPressed: () {
-                print(titleController.text);
-                print(amountController.text);
-                addTx(
-                  titleController.text,
-                  double.parse(
-                    amountController.text,
-                  ),
-                );
-              },
-              child: Text(
-                'Add Transaction',
-                style: TextStyle(
-                  color: Colors.purple,
+            controller: amountController,
+          ),
+          FlatButton(
+            onPressed: () {
+              print(titleController.text);
+              print(amountController.text);
+              addTx(
+                titleController.text,
+                double.parse(
+                  amountController.text,
                 ),
+              );
+            },
+            child: Text(
+              'Add Transaction',
+              style: TextStyle(
+                color: Colors.purple,
               ),
             ),
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
   }
 }
